@@ -1,0 +1,62 @@
+﻿@model MvcCodeFirst.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <div style="height:150px; width=150px">
+                <img src="@Url.Content(Model.Picpath)" height="150px" width="150px" />
+            </div>
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picpath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picpath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalEx)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalEx)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAvaiable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAvaiable)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-danger" })
